@@ -35,6 +35,12 @@ def nwd(a, b):
         b = pom % b
     return a
 
+def pot2(n):
+    return 2 ** n
+
+def pot3(n):
+    return 3 ** n
+
 HelloWorld()
 print('5! = ', silnia(5))
 print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sumNatural(5))
@@ -43,4 +49,6 @@ print('Srednia z podanych liczb: ', sredniaArytm(2))
 print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
 print('Nwd(17, 16) = ', nwd(17, 16))
 print('Nwd(8, 16) = ', nwd(8, 16))
+print('2^10 = ', pow(2, 10))
+print('3^10 = ', pow(3, 10))
 
