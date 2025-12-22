@@ -16,26 +16,21 @@ def sredniaArytm(n):
         sum += int(input())
     return sum/n
 
+def czy_pierwsza(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
 
 HelloWorld()
-print(silnia(5))
-print(sumNatural(5))
-print(sredniaArytm(2))
-y = 3
-print('x-Ala ma kota, byle byl commit-l')
-print('x-Dodaje by cos nie gralo-k')
-print('x-Aby byl nowy commit-a')
-print('x-Aby byl nowy commit 1a')
-print('x-Aby byl nowy commit 2b')
-print('x-Aby byl nowy commit 3c')
-print('x-Aby byl nowy commit 4d')
-print('Aby byl nowy commit 5e')
-print('Aby byl nowy commit 6f')
-print('Aby byl nowy commit 7')
-print('Aby byl nowy commit 8')
-print('Aby byl nowy commit 9')
-print('Aby byl nowy commit 10')
-print('Aby byl nowy commit 11')
-print('Aby byl nowy commit 12')
-x = 2
-print(x+y)
+print('5! = ', silnia(5))
+print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sumNatural(5))
+print('Podaj dwie liczby z ktorych chcesz obliczyc srednia:')
+print('Srednia z podanych liczb: ', sredniaArytm(2))
+print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
