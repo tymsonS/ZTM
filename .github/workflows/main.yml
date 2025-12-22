@@ -13,7 +13,7 @@ jobs:
       - name: Move linked issue to Merged column
         uses: actions/add-to-project@v1.0.2
         with:
-          project-url: https://github.com/tymsonS/ZTM
+          project-url: https://github.com/users/tymsonS/projects/2?fbclid=IwY2xjawO2kolleHRuA2FlbQIxMABicmlkETB5S0hlSlNSVFBreWp5OGdRc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHvM8DdooXp_0WSREhtP74rPmupG3kL0LGx42EgSArZxnurSR7OXpk-f4VwXW_aem_KpQ8Y-8fzDnnLDbb6kiazQ
           github-token: ${{ secrets.GITHUB_TOKEN }}
           field: Status
           value: Merged
