@@ -43,3 +43,4 @@ print('Srednia z podanych liczb: ', sredniaArytm(2))
 print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
 print('Nwd(17, 16) = ', nwd(17, 16))
 print('Nwd(8, 16) = ', nwd(8, 16))
+
