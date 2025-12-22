@@ -34,3 +34,4 @@ print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sumNatural(
 print('Podaj dwie liczby z ktorych chcesz obliczyc srednia:')
 print('Srednia z podanych liczb: ', sredniaArytm(2))
 print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
+
