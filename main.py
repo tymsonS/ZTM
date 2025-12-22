@@ -28,10 +28,18 @@ def czy_pierwsza(n):
             return False
     return True
 
+def nwd(a, b):
+    while b > 0:
+        pom = a
+        a = b
+        b = pom % b
+    return a
+
 HelloWorld()
 print('5! = ', silnia(5))
 print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sumNatural(5))
 print('Podaj dwie liczby z ktorych chcesz obliczyc srednia:')
 print('Srednia z podanych liczb: ', sredniaArytm(2))
 print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
-
+print('Nwd(17, 16) = ', nwd(17, 16))
+print('Nwd(8, 16) = ', nwd(8, 16))
