@@ -1,0 +1,19 @@
+name: Move issue to Merged after PR merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  move-to-merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move linked issue to Merged column
+        uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/tymsonS/ZTM
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          field: Status
+          value: Merged
