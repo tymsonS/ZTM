@@ -13,7 +13,7 @@ jobs:
       - name: Move linked issue to Merged column
         uses: actions/add-to-project@v1.0.2
         with:
-          project-url: https://github.com/tymsonS/ZTM
+          project-url: https://github.com/users/tymsonS/projects/2
           github-token: ${{ secrets.GITHUB_TOKEN }}
           field: Status
           value: Merged
