@@ -58,5 +58,5 @@ print('Nwd(8, 16) = ', nwd(8, 16))
 print('2^10 = ', pow(2, 10))
 print('3^10 = ', pow(3, 10))
 print('5^3 = ', pow(5, 3))
-
+print('7^3 = ', pow(7, 3))
 
