@@ -41,6 +41,9 @@ def pot2(n):
 def pot3(n):
     return 3 ** n
 
+def pot5(n):
+    return 5 ** n
+
 HelloWorld()
 print('5! = ', silnia(5))
 print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sumNatural(5))
@@ -51,4 +54,5 @@ print('Nwd(17, 16) = ', nwd(17, 16))
 print('Nwd(8, 16) = ', nwd(8, 16))
 print('2^10 = ', pow(2, 10))
 print('3^10 = ', pow(3, 10))
+print('5^3 = ', pow(5, 3))
 
