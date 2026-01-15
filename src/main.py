@@ -9,8 +9,7 @@ def silnia(n):
     """Zwraca silnię liczby n (n!)."""
     if n == 1:
         return 1
-    else:
-        return n * silnia(n - 1)
+    return n * silnia(n - 1)
 
 def sum_natural(n):
     """Zwraca sumę pierwszych n liczb naturalnych dodatnich."""
@@ -18,10 +17,10 @@ def sum_natural(n):
 
 def srednia_arytmetyczna(n):
     """Sprawdza, czy liczba n jest liczbą pierwszą."""
-    sum = 0
-    for i in range(n):
-        sum += int(input())
-    return sum/n
+    suma = 0
+    for _ in range(n):
+        suma += int(input())
+    return suma/n
 
 def czy_pierwsza(n):
     """Zwraca największy wspólny dzielnik liczb a i b."""
@@ -73,4 +72,3 @@ if __name__ == "__main__":
     print('3^10 = ', pot3(10))
     print('5^3 = ', pot5(3))
     print('7^3 = ', pot7(3))
-
