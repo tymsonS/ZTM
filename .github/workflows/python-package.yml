@@ -31,6 +31,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Pytest for automated test
       run: |
+        export PYTHONPATH=$(pwd)
         pytest
     - name: Pylint for code analysis
       run: |
