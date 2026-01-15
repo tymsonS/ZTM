@@ -35,4 +35,4 @@ jobs:
         pytest
     - name: Pylint for code analysis
       run: |
-        pylint /src --fail-under=9.5
+        pylint src/ --fail-under=9.5
