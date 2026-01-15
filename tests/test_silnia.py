@@ -2,7 +2,7 @@
 Testy funkcji silnia z modułu main.
 """
 
-from main import silnia
+from src.main import silnia
 
 def test_silnia_5():
     """Sprawdza, czy silnia(5) zwraca 120."""
