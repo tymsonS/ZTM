@@ -14,6 +14,21 @@ on:
   workflow_dispatch:
 
 jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_review' && github.event.review.state == 'approved'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Enable auto-merge for the PR
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          # UWAGA: Użycie GITHUB_TOKEN może uniemożliwić wyzwalanie kolejnych workflow po merge'u.
+          # Jeśli deployment nie startuje, zamień poniższą linię na: GH_TOKEN: ${{ secrets.MY_PAT_TOKEN }}
+          GH_TOKEN: ${{ secrets.MY_PAT_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
     if: |
