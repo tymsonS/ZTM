@@ -58,6 +58,11 @@ def pot7(n):
     """Zwraca 7 do potęgi n."""
     return 7 ** n
 
+def pot13(n):
+    """Zwraca 7 do potęgi n."""
+    return 13 ** n
+
+
 @app.get("/process")
 def process():
     """Pierwszy endpoint"""
@@ -65,6 +70,12 @@ def process():
               "3^10": pot3(10),
               "5^3": pot5(3)}
     return jsonify(result)
+
+@app.get("/test")
+def test():
+    """Pierwszy endpoint"""
+    result1 = {"13^10": pot13(10)}
+    return jsonify(result1)
 
 # if __name__ == "__main__":
     # Development server; for production use gunicorn
