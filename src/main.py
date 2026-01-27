@@ -1,6 +1,12 @@
 """
 Program zawiera przykładowe funkcje matematyczne
 """
+
+# main.py
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
 def hello_world():
     """Wyświetla napis 'Hello World'."""
     print("Hello World")
@@ -59,16 +65,14 @@ def pot7(n):
     """Zwraca 7 do potęgi n."""
     return 7 ** n
 
+@app.get("/process")
+def process():
+    """Pierwszy endpoint"""
+    result = {"2^10": pot2(10),
+              "3^10": pot3(10),
+              "5^3": pot5(3)}
+    return jsonify(result)
+
 if __name__ == "__main__":
-    hello_world()
-    print('5! = ', silnia(5))
-    print('Suma pierwszych 5 liczb ciagu liczb naturalnych dodatnich: ', sum_natural(5))
-    print('Podaj dwie liczby z ktorych chcesz obliczyc srednia:')
-    print('Srednia z podanych liczb: ', srednia_arytmetyczna(2))
-    print('Czy 7 jest pierwsza: ', czy_pierwsza(7))
-    print('Nwd(17, 16) = ', nwd(17, 16))
-    print('Nwd(8, 16) = ', nwd(8, 16))
-    print('2^10 = ', pot2(10))
-    print('3^10 = ', pot3(10))
-    print('5^3 = ', pot5(3))
-    print('7^3 = ', pot7(3))
+    # Development server; for production use gunicorn
+    app.run(host="0.0.0.0", port=8080, debug=False)
