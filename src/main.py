@@ -78,5 +78,4 @@ def test():
     return jsonify(result1)
 
 # if __name__ == "__main__":
-    # Development server; for production use gunicorn
     # app.run(host="0.0.0.0", port=8080, debug=False)
