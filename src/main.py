@@ -58,6 +58,11 @@ def pot7(n):
     """Zwraca 7 do potęgi n."""
     return 7 ** n
 
+def pot13(n):
+    """Zwraca 7 do potęgi n."""
+    return 13 ** n
+
+
 @app.get("/process")
 def process():
     """Pierwszy endpoint"""
