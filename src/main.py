@@ -21,13 +21,6 @@ def sum_natural(n):
     """Zwraca sumę pierwszych n liczb naturalnych dodatnich."""
     return n * (n + 1) / 2
 
-def srednia_arytmetyczna(n):
-    """Sprawdza, czy liczba n jest liczbą pierwszą."""
-    suma = 0
-    for _ in range(n):
-        suma += int(input())
-    return suma/n
-
 def czy_pierwsza(n):
     """Zwraca największy wspólny dzielnik liczb a i b."""
     if n <= 1:
